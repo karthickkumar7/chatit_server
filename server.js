@@ -12,6 +12,8 @@ app.use(cors());
 
 // routes
 app.use('/api/user', require('./routes/user.routes'));
+app.use('/api/chat', require('./routes/chat.routes'));
+app.use('/api/message', require('./routes/message.routes'));
 
 mongoose.connect(MONGO_URI).then(() => {
     app.listen(PORT, () => console.log('server started!'));
